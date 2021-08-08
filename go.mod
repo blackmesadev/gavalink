@@ -1,8 +1,8 @@
-module github.com/foxbot/gavalink
+module github.com/blackmesadev/gavalink
 
-go 1.12
+go 1.16
 
 require (
-	github.com/bwmarrin/discordgo v0.19.0
+	github.com/foxbot/gavalink v1.0.0
 	github.com/gorilla/websocket v1.4.0
 )
