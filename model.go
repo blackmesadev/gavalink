@@ -11,6 +11,8 @@ const (
 	NoMatches = "NO_MATCHES"
 	// LoadFailed is a Tracks Type for an internal Lavalink error
 	LoadFailed = "LOAD_FAILED"
+	// ReasonFinished is a stop reason type for when the reason is that it finished
+	ReasonFinished = "FINISED"
 )
 
 // Tracks contains data for a Lavalink Tracks response
