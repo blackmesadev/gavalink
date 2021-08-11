@@ -1,11 +1,15 @@
 package gavalink
 
 // EventHandler defines events that Lavalink may send to a player
-type EventHandler interface {
-	OnTrackEnd(player *Player, track string, reason string) error
-	OnTrackException(player *Player, track string, reason string) error
-	OnTrackStuck(player *Player, track string, threshold int) error
+type EventHandler struct {
+	OnTrackEnd       OnTrackEnd
+	OnTrackException OnTrackException
+	OnTrackStuck     OnTrackStuck
 }
+
+type OnTrackEnd func(*Player, string, string) error
+type OnTrackException func(*Player, string, string) error
+type OnTrackStuck func(*Player, string, int) error
 
 // DummyEventHandler provides an empty event handler for users who
 // wish to drop events outright. This is not recommended.
